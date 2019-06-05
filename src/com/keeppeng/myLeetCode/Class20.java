@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class Class20 {
 	public static void main(String[] args) {
-		String inputString = "([()}])";
+		String inputString = "[])";
 		System.out.println(check(inputString));
 	}
 
@@ -29,7 +29,7 @@ public class Class20 {
 			if (array[i] == '(' | array[i] == '[' | array[i] == '{') {
 				solve.add(array[i]);
 			} else {
-				if (i > 0) {
+				if (i > 0 & solve.size() > 0) {
 					// 如果不是第一位，就需要和前一位对比，成对出现就移除前一位,然后继续遍历
 					if ((array[i] == ')' && (char) solve.get(solve.size() - 1) == '(')
 							| (array[i] == ']' && (char) solve
