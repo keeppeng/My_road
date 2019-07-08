@@ -61,7 +61,7 @@ public class Class66 {
 				if (i == 0) {
 					// 表示这是第一位，应当扩展一位
 					int[] newints = { 1 };
-					// 这里使用的是数组的扩容和复制
+					// 这里使用的是数组的扩容和复制,也可以扩容+1之后直接定义第一位为1，后面的默认值为0
 					newints = Arrays.copyOf(newints, 1 + digits.length);
 					System.arraycopy(digits, 0, newints, 1, digits.length);
 					digits = newints;
